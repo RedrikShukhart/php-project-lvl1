@@ -1,0 +1,12 @@
+{
+    "name": "hexlet/code",
+    "description": "Learning project Brain games",
+    "type": "project",
+    "authors": [
+        {
+            "name": "RedrikShukhart",
+            "email": "redrikshu@gmail.com"
+        }
+    ],
+    "require": {}
+}
