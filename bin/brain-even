@@ -1,0 +1,64 @@
+#!/usr/bin/env php
+<?php
+
+use function cli\line;
+use function cli\prompt;
+
+$autoloadPath1 = __DIR__ . '/../../../autoload.php';
+$autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+if (file_exists($autoloadPath1)) {
+    require_once $autoloadPath1;
+} else {
+    require_once $autoloadPath2;
+}
+
+/**
+ * Описание логики игры с четными числами
+ * @return void
+ */
+function theGameEven()
+{
+    // greeting
+    line('Welcome to the Brain Game!');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
+    line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
+
+    $correctAnswers = 0;
+    // if number is even
+    for ($i = 0; $i < 3; $i++) {
+        // question:
+        $randNumber = rand(0, 10);
+        line("Question, %s", $randNumber);
+        $answer = prompt("Your answer");
+
+        $modRandNumber = fmod($randNumber, 2);
+
+        if ($modRandNumber != 0) {
+            if ($answer === "no") {
+                line("Correct!", $answer);
+                $correctAnswers++;
+            } else {
+                line("$answer is wrong answer ;(. Correct answer was 'no'.");
+                line("Let's try again, %s!", $name);
+                break;
+            }
+        }
+        if ($modRandNumber == 0) {
+            if ($answer === "yes") {
+                line("Correct!", $answer);
+                $correctAnswers++;
+            } else {
+                line("$answer is wrong answer ;(. Correct answer was 'yes'.");
+                line("Let's try again, %s!", $name);
+                break;
+            }
+        }
+
+        if ($correctAnswers === 3) {
+            line("Congratulations, %s!", $name);
+        }
+    }
+}
+
+theGameEven();
