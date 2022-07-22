@@ -2,6 +2,9 @@
 [![Actions Status](https://github.com/RedrikShukhart/php-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/RedrikShukhart/php-project-lvl1/actions)
 <a href="https://codeclimate.com/github/RedrikShukhart/php-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/375040e12e763075bc02/maintainability" /></a>
 
+[//]: # (Используемые библиотеки:)
+
+[//]: # (https://www.php.net/manual/ru/gmp.installation.php)
 
 ### Setup
     $ git clone https://github.com/RedrikShukhart/php-project-lvl1
@@ -24,3 +27,9 @@ Example [make brain-calc](https://asciinema.org/a/F4Wu5lCS31qCBmRRtOB9xudlV)
 
 Another example [make brain-calc](https://asciinema.org/a/Tz1ytznz6WjhsyqyNbtgB8sHx)
 [![asciicast](https://asciinema.org/a/Tz1ytznz6WjhsyqyNbtgB8sHx.svg)](https://asciinema.org/a/Tz1ytznz6WjhsyqyNbtgB8sHx)
+
+Example [make brain-gcd](https://asciinema.org/a/DxDfKxWLmak411jW68zMHIj0a)
+[![asciicast](https://asciinema.org/a/DxDfKxWLmak411jW68zMHIj0a.svg)](https://asciinema.org/a/DxDfKxWLmak411jW68zMHIj0a)
+
+Another example [make brain-gcd](https://asciinema.org/a/jpfDpdbDRGoyin6UusPaUB3n2)
+[![asciicast](https://asciinema.org/a/jpfDpdbDRGoyin6UusPaUB3n2.svg)](https://asciinema.org/a/jpfDpdbDRGoyin6UusPaUB3n2)

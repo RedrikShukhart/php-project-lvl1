@@ -38,8 +38,6 @@ function gameEngine(string $gameRules, array $questionValues, array $solution): 
         //get user's answer
         $answer = prompt("Your answer");
 
-        //in every game calculated the correct answers
-
         //compare correct answer with user's answer
         if ($solution[$i] == $answer) {
             line("Correct!", $answer);
