@@ -3,9 +3,9 @@
 
 use function Brain\Games\Engine\gameEngine;
 use function Brain\Games\Engine\greetingUser;
-use function Games\Brain\Games\Even\generateRandomArguments;
-use function Games\Brain\Games\Even\getCorrectAnswer;
-
+use function Games\Brain\Games\Calc\generateGameQuestions;
+use function Games\Brain\Games\Calc\generateRandomArguments;
+use function Games\Brain\Games\Calc\getCorrectAnswer;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -16,7 +16,8 @@ if (file_exists($autoloadPath1)) {
 }
 
 $arguments = generateRandomArguments();
+$gameQuestions = generateGameQuestions($arguments);
 $correctSolution = getCorrectAnswer($arguments);
 
 greetingUser();
-gameEngine(GAME_RULES_EVEN, $arguments, $correctSolution);
+gameEngine(GAME_RULES_CALC, $gameQuestions, $correctSolution);
