@@ -26,27 +26,29 @@ function greetingUser(): void
  */
 function gameEngine(string $gameRules, array $questionValues, array $solution): void
 {
+    if (empty($questionValues) && empty($solution)) {
+        die;
+    }
+
     line($gameRules);
 
     $correctAnswers = 0;
 
     for ($i = 0; $i < 3; $i++) {
-        if (!empty($questionValues) && !empty($solution)) {
-            line("Question, %s", $questionValues[$i]);
-            $answer = prompt("Your answer");
+        line("Question, %s", $questionValues[$i]);
+        $answer = prompt("Your answer");
 
-            if ($solution[$i] == $answer) {
-                line("Correct!", $answer);
-                $correctAnswers++;
-            } else {
-                line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $solution[$i]);
-                line("Let's try again, %s!", USER_NAME);
-                break;
-            }
+        if ($solution[$i] == $answer) {
+            line("Correct!", $answer);
+            $correctAnswers++;
+        } else {
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $solution[$i]);
+            line("Let's try again, %s!", USER_NAME);
+            break;
+        }
 
-            if ($correctAnswers === 3) {
-                line("Congratulations, %s!", USER_NAME);
-            }
+        if ($correctAnswers === 3) {
+            line("Congratulations, %s!", USER_NAME);
         }
     }
 }
