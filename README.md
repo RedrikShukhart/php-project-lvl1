@@ -33,3 +33,9 @@ Example [make brain-gcd](https://asciinema.org/a/DxDfKxWLmak411jW68zMHIj0a)
 
 Another example [make brain-gcd](https://asciinema.org/a/jpfDpdbDRGoyin6UusPaUB3n2)
 [![asciicast](https://asciinema.org/a/jpfDpdbDRGoyin6UusPaUB3n2.svg)](https://asciinema.org/a/jpfDpdbDRGoyin6UusPaUB3n2)
+
+Example [make brain-progression](https://asciinema.org/a/Y3okZ2Rxvqem2zDcslGF4L8N7)
+[![asciicast](https://asciinema.org/a/Y3okZ2Rxvqem2zDcslGF4L8N7.svg)](https://asciinema.org/a/Y3okZ2Rxvqem2zDcslGF4L8N7)
+
+Another example [make brain-progression](https://asciinema.org/a/W1KOJaHCvgNVZAAiCUtd3wb04)
+[![asciicast](https://asciinema.org/a/W1KOJaHCvgNVZAAiCUtd3wb04.svg)](https://asciinema.org/a/W1KOJaHCvgNVZAAiCUtd3wb04)
