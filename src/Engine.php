@@ -19,37 +19,34 @@ function greetingUser(): void
 
 /**
  * General logics for all games.
- * @param string $gameRules Description game rules
- * @param array $questionValues Placeholders for question
- * @param array $solution Correct answers in game
+ * @param  string $gameRules      Description game rules
+ * @param  array  $questionValues Placeholders for question
+ * @param  array  $solution       Correct answers in game
  * @return void
  */
 function gameEngine(string $gameRules, array $questionValues, array $solution): void
 {
-    //show the game rules to user and ask questions
     line($gameRules);
 
-    //number of correct answers
     $correctAnswers = 0;
 
     for ($i = 0; $i < 3; $i++) {
-        line("Question, %s", $questionValues[$i]);
+        if (!empty($questionValues) && !empty($solution)) {
+            line("Question, %s", $questionValues[$i]);
+            $answer = prompt("Your answer");
 
-        //get user's answer
-        $answer = prompt("Your answer");
+            if ($solution[$i] == $answer) {
+                line("Correct!", $answer);
+                $correctAnswers++;
+            } else {
+                line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $solution[$i]);
+                line("Let's try again, %s!", USER_NAME);
+                break;
+            }
 
-        //compare correct answer with user's answer
-        if ($solution[$i] == $answer) {
-            line("Correct!", $answer);
-            $correctAnswers++;
-        } else {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $solution[$i]);
-            line("Let's try again, %s!", USER_NAME);
-            break;
-        }
-
-        if ($correctAnswers === 3) {
-            line("Congratulations, %s!", USER_NAME);
+            if ($correctAnswers === 3) {
+                line("Congratulations, %s!", USER_NAME);
+            }
         }
     }
 }

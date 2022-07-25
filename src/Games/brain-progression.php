@@ -6,11 +6,11 @@ namespace Games\Brain\Games\Progression;
 define("GAME_RULES_PROGRESSION", "What number is missing in the progression?");
 
 /**
- * Associated array of arguments of arithmetics progression
- * @return array Arguments, where
- * 'step' - step of arithmetics progression
- * 'numbers' - numbers of arithmetics progression
+ * Generates associated array of arguments of arithmetics progression, where
  * 'question_key_number' - unknown number key to ask user
+ * 'step'                - step of arithmetics progression
+ * 'numbers'             - numbers of arithmetics progression
+ * @return array
  */
 function generateRandomArguments(): array
 {
@@ -30,8 +30,15 @@ function generateRandomArguments(): array
     return $arguments;
 }
 
-//print_r(generateRandomNumbers());
-
+/**
+ * Generates array-list of questions to the user
+ * in format 12 13 14 .. 15 16 17
+ * @param  array $gameArguments Array of arguments, where associated array keys:
+ * 'question_key_number' - unknown number key to ask user
+ * 'step'                - step of arithmetics progression
+ * 'numbers'             - numbers of arithmetics progression
+ * @return array
+ */
 function generateGameQuestions(array $gameArguments): array
 {
     $questions = [];
@@ -46,12 +53,15 @@ function generateGameQuestions(array $gameArguments): array
     return $questions;
 }
 
-//$numbers = generateRandomArguments();
-
-//print_r($numbers);
-//print_r(generateGameQuestions($numbers));
-
-function getCorrectAnswer($gameArguments)
+/**
+ * Get the correct answers, which the number is hidden
+ * @param  array $gameArguments Array of arguments, where associated array keys:
+ * 'question_key_number' - unknown number key to ask user
+ * 'step'                - step of arithmetics progression
+ * 'numbers'             - numbers of arithmetics progression
+ * @return array
+ */
+function getCorrectAnswer(array $gameArguments): array
 {
     $solution = [];
     $key = 0;
@@ -59,7 +69,6 @@ function getCorrectAnswer($gameArguments)
     foreach ($gameArguments as $gameArgument) {
         $keyToRemove = $gameArgument['question_key_number'];
         if ($keyToRemove === 0) {
-            //действия на случай, если неизвестное число первое
             $solution[$key] = $gameArgument['numbers'][$keyToRemove + 1] - $gameArgument['step'];
         } else {
             $solution[$key] = $gameArgument['numbers'][$keyToRemove - 1] + $gameArgument['step'];
@@ -68,4 +77,3 @@ function getCorrectAnswer($gameArguments)
     }
     return $solution;
 }
-//print_r(getCorrectAnswer($numbers));
