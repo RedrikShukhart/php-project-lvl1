@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 
 /**
- * Приветствие пользователя
+ * Greeting user
  * @return void
  */
 function welcomeToGame()

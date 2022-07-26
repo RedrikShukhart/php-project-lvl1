@@ -2,14 +2,13 @@
 
 namespace Games\Brain\Games\Calc;
 
-//game rules
 define("GAME_RULES_CALC", "What is the result of the expression?");
 
 /**
  * Generate associated array with random arguments
  * @return array Arguments, where associated array keys:
- * 'operand' -  Arithmetics operand
- * 'number_first' -  First number
+ * 'operand'       - Arithmetics operand
+ * 'number_first'  - First number
  * 'number_second' - Second number
  */
 function generateRandomArguments(): array
@@ -33,9 +32,9 @@ function generateRandomArguments(): array
 
 /**
  * Generate array-list of questions to the user
- * @param array $gameArguments Arguments, where associated array keys:
- * 'operand' -  Arithmetics operand
- * 'number_first' -  First number
+ * @param  array $gameArguments Arguments, where associated array keys:
+ * 'operand'       - Arithmetics operand
+ * 'number_first'  - First number
  * 'number_second' - Second number
  * @return array Each element of the array is a question for calculation to the user
  */
@@ -53,10 +52,10 @@ function generateGameQuestions(array $gameArguments): array
 }
 
 /**
- * Calculate correct answer for operands "+, -, *" with two numbers.
- * @param array $gameArguments Arguments, where associated array keys:
- * 'operand' -  Arithmetics operand
- * 'number_first' -  First number
+ * Calculate correct answer for operands "+, -, *" with two numbers
+ * @param  array $gameArguments Arguments, where associated array keys:
+ * 'operand'       - Arithmetics operand
+ * 'number_first'  - First number
  * 'number_second' - Second number
  * @return array
  */
@@ -66,7 +65,6 @@ function getCorrectAnswer(array $gameArguments): array
     $i = 0;
 
     foreach ($gameArguments as $arguments) {
-        //the game begins - calculating the correct answer
         switch ($arguments['operand']) {
             case("+"):
                 $solution[$i] = $arguments['number_first'] + $arguments['number_second'];
@@ -79,7 +77,6 @@ function getCorrectAnswer(array $gameArguments): array
                 break;
         }
         $i++;
-        //the game ends
     }
     return $solution;
 }

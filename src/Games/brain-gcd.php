@@ -2,16 +2,13 @@
 
 namespace Games\Brain\Games\Gcd;
 
-//Наибольший общий делитель
-
-//game rules
 define("GAME_RULES_GCD", "Find the greatest common divisor of given numbers.");
 
 /**
- * Generate associated array with random arguments
- * @return array Arguments, where associated array keys:
- * 'number_first' -  First number
+ * Generate associated array with random arguments where associated array keys:
+ * 'number_first'  - First number
  * 'number_second' - Second number
+ * @return array
  */
 function generateRandomArguments(): array
 {
@@ -31,8 +28,8 @@ function generateRandomArguments(): array
 
 /**
  * Generate array-list of questions to the user
- * @param array $gameArguments Arguments, where associated array keys:
- * 'number_first' -  First number
+ * @param  array $gameArguments Arguments, where associated array keys:
+ * 'number_first'  - First number
  * 'number_second' - Second number
  * @return array Each element of the array is a question for calculation to the user
  */
@@ -51,8 +48,8 @@ function generateGameQuestions(array $gameArguments): array
 
 /**
  * Calculate correct answer: greatest common divisor of two numbers.
- * @param array $gameArguments Arguments, where associated array keys:
- * 'number_first' -  First number
+ * @param  array $gameArguments Arguments, where associated array keys:
+ * 'number_first'  - First number
  * 'number_second' - Second number
  * @return array
  */

@@ -2,7 +2,6 @@
 
 namespace Games\Brain\Games\Progression;
 
-//game rules
 define("GAME_RULES_PROGRESSION", "What number is missing in the progression?");
 
 /**

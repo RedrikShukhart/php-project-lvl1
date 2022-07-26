@@ -2,7 +2,6 @@
 
 namespace Games\Brain\Games\Even;
 
-//game rules
 define("GAME_RULES_EVEN", "Answer \"yes\" if the number is even, otherwise answer \"no\".");
 
 /**
@@ -21,8 +20,8 @@ function generateRandomArguments(): array
 }
 
 /**
- * Calculate correct answers: is the number even.
- * @param array $gameArguments Arguments
+ * Calculate correct answers: is the number even
+ * @param  array $gameArguments Arguments
  * @return array
  */
 function getCorrectAnswer(array $gameArguments): array
@@ -31,7 +30,6 @@ function getCorrectAnswer(array $gameArguments): array
     $i = 0;
 
     foreach ($gameArguments as $arguments) {
-        //the game begins - calculating the correct answer
         $modRandNumber = fmod($arguments, 2);
 
         switch ($modRandNumber) {
@@ -43,7 +41,6 @@ function getCorrectAnswer(array $gameArguments): array
                 break;
         }
         $i++;
-        //the game ends
     }
     return $solution;
 }

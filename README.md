@@ -39,3 +39,9 @@ Example [make brain-progression](https://asciinema.org/a/Y3okZ2Rxvqem2zDcslGF4L8
 
 Another example [make brain-progression](https://asciinema.org/a/W1KOJaHCvgNVZAAiCUtd3wb04)
 [![asciicast](https://asciinema.org/a/W1KOJaHCvgNVZAAiCUtd3wb04.svg)](https://asciinema.org/a/W1KOJaHCvgNVZAAiCUtd3wb04)
+
+Example [make brain-prime](https://asciinema.org/a/j8EJWxkBV8ponDuyNpPR5WlgN)
+[![asciicast](https://asciinema.org/a/j8EJWxkBV8ponDuyNpPR5WlgN.svg)](https://asciinema.org/a/j8EJWxkBV8ponDuyNpPR5WlgN)
+
+Another example [make brain-prime](https://asciinema.org/a/VKfLeaYApMFnuA8InYYaG4z5h)
+[![asciicast](https://asciinema.org/a/VKfLeaYApMFnuA8InYYaG4z5h.svg)](https://asciinema.org/a/VKfLeaYApMFnuA8InYYaG4z5h)

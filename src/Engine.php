@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 
 /**
- * Greeting user and define as constant user's name.
+ * Greeting user and define as constant user's name
  * @return void
  */
 function greetingUser(): void
@@ -18,7 +18,7 @@ function greetingUser(): void
 }
 
 /**
- * General logics for all games.
+ * General logics for all games
  * @param  string $gameRules      Description game rules
  * @param  array  $questionValues Placeholders for question
  * @param  array  $solution       Correct answers in game
@@ -31,21 +31,19 @@ function gameEngine(string $gameRules, array $questionValues, array $solution): 
     }
 
     line($gameRules);
-
     $correctAnswers = 0;
 
     for ($i = 0; $i < 3; $i++) {
         line("Question, %s", $questionValues[$i]);
         $answer = prompt("Your answer");
 
-        if ($solution[$i] == $answer) {
-            line("Correct!", $answer);
-            $correctAnswers++;
-        } else {
+        if ($solution[$i] != $answer) {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $solution[$i]);
             line("Let's try again, %s!", USER_NAME);
             break;
         }
+        line("Correct!", $answer);
+        $correctAnswers++;
 
         if ($correctAnswers === 3) {
             line("Congratulations, %s!", USER_NAME);
