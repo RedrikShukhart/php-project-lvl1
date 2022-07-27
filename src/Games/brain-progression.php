@@ -43,7 +43,7 @@ function generateGameQuestions(array $gameArguments): array
     $questions = [];
     $key = 0;
 
-    foreach ($gameArguments as  $gameArgument) {
+    foreach ($gameArguments as $gameArgument) {
         $keyToRemove = $gameArgument['question_key_number'];
         $gameArgument['numbers'][$keyToRemove] = '..';
         $questions[$key] = implode(' ', $gameArgument['numbers']);
