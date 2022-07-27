@@ -2,9 +2,13 @@
 [![Actions Status](https://github.com/RedrikShukhart/php-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/RedrikShukhart/php-project-lvl1/actions)
 <a href="https://codeclimate.com/github/RedrikShukhart/php-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/375040e12e763075bc02/maintainability" /></a>
 
-[//]: # (Используемые библиотеки:)
-
-[//]: # (https://www.php.net/manual/ru/gmp.installation.php)
+### Description
+Several mathematics mini-games launched from the console. Every game ask user the question 3 times if user's answer is correct, either the game over.   
+* Brain-even - is the number even;
+* Brain-calc - calculate 2 random numbers and random operator "+ - *";
+* Brain-gcd - find greatest common divisor of 2 given random numbers;
+* Brain-prime - is yhe number is prime;
+* Brain-progression - find unknown number of arithmetics progression.
 
 ### Setup
     $ git clone https://github.com/RedrikShukhart/php-project-lvl1

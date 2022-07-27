@@ -39,7 +39,7 @@ function generateGameQuestions(array $gameArguments): array
     $i = 0;
 
     foreach ($gameArguments as $arguments) {
-        $gameQuestions[$i] = $arguments['number_first'] . ' ' . $arguments['number_second'];
+        $gameQuestions[$i] = "{$arguments['number_first']} {$arguments['number_second']}";
         $i++;
     }
 
