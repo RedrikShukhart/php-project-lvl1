@@ -47,7 +47,30 @@ function generateGameQuestions(array $gameArguments): array
 }
 
 /**
- * Calculate correct answer: greatest common divisor of two numbers.
+ * Calculate the greatest common divisor of two numbers
+ * @param  int $numberFirst  First number
+ * @param  int $numberSecond Second number
+ * @return int
+ */
+function getGcd(int $numberFirst, int $numberSecond): int
+{
+    if ($numberFirst == $numberSecond) {
+        return $numberSecond;
+    }
+
+    while ($numberFirst != $numberSecond) {
+        if ($numberFirst > $numberSecond) {
+            $numberFirst = $numberFirst - $numberSecond;
+        } else {
+            $numberSecond = $numberSecond - $numberFirst;
+        }
+    }
+
+    return $numberFirst;
+}
+
+/**
+ * Calculate correct answer: greatest common divisor of two numbers
  * @param  array $gameArguments Arguments, where associated array keys:
  * 'number_first'  - First number
  * 'number_second' - Second number
@@ -59,7 +82,7 @@ function getCorrectAnswer(array $gameArguments): array
     $i = 0;
 
     foreach ($gameArguments as $arguments) {
-        $solution[$i] = gmp_gcd($arguments['number_first'], $arguments['number_second']);
+        $solution[$i] = getGcd($arguments['number_first'], $arguments['number_second']);
         $i++;
     }
     return $solution;

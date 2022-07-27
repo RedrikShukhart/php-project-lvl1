@@ -33,7 +33,7 @@ function getCorrectAnswer(array $gameArguments): array
         $modRandNumber = fmod($arguments, 2);
 
         switch ($modRandNumber) {
-            case(0):
+            case (0):
                 $solution[$i] = 'yes';
                 break;
             default:

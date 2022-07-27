@@ -66,13 +66,13 @@ function getCorrectAnswer(array $gameArguments): array
 
     foreach ($gameArguments as $arguments) {
         switch ($arguments['operand']) {
-            case("+"):
+            case ("+"):
                 $solution[$i] = $arguments['number_first'] + $arguments['number_second'];
                 break;
-            case("-"):
+            case ("-"):
                 $solution[$i] = $arguments['number_first'] - $arguments['number_second'];
                 break;
-            case("*"):
+            case ("*"):
                 $solution[$i] = $arguments['number_first'] * $arguments['number_second'];
                 break;
         }

@@ -36,7 +36,7 @@ function gameEngine(string $gameRules, array $questionValues, array $solution): 
         line("Question, %s", $questionValues[$i]);
         $answer = prompt("Your answer");
 
-        if ($solution[$i] !== $answer) {
+        if ($solution[$i] != $answer) {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $solution[$i]);
             line("Let's try again, %s!", USER_NAME);
             break;
