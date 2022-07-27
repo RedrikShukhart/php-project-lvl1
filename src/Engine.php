@@ -11,7 +11,7 @@ use function cli\prompt;
  */
 function greetingUser(): void
 {
-    line('Welcome to the Brain Game!');
+    line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     define("USER_NAME", $name);
     line("Hello, %s!", USER_NAME);
@@ -33,7 +33,7 @@ function gameEngine(string $gameRules, array $questionValues, array $solution): 
     line($gameRules);
 
     for ($i = 0, $correctAnswers = 0; $i < 3; $i++) {
-        line("Question, %s", $questionValues[$i]);
+        line("Question: %s", $questionValues[$i]);
         $answer = prompt("Your answer");
 
         if ($solution[$i] != $answer) {
