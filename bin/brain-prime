@@ -2,7 +2,6 @@
 <?php
 
 use function Brain\Games\Engine\gameEngine;
-use function Brain\Games\Engine\greetingUser;
 use function Games\Brain\Games\Prime\generateRandomArguments;
 use function Games\Brain\Games\Prime\getCorrectAnswer;
 
@@ -17,5 +16,4 @@ if (file_exists($autoloadPath1)) {
 $gameArguments = generateRandomArguments();
 $correctSolution = getCorrectAnswer($gameArguments);
 
-greetingUser();
 gameEngine(GAME_RULES_PRIME, $gameArguments, $correctSolution);

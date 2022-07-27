@@ -6,18 +6,6 @@ use function cli\line;
 use function cli\prompt;
 
 /**
- * Greeting user and define as constant user's name
- * @return void
- */
-function greetingUser(): void
-{
-    line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name?');
-    define("USER_NAME", $name);
-    line("Hello, %s!", USER_NAME);
-}
-
-/**
  * General logics for all games
  * @param  string $gameRules      Description game rules
  * @param  array  $questionValues Placeholders for question
@@ -26,9 +14,9 @@ function greetingUser(): void
  */
 function gameEngine(string $gameRules, array $questionValues, array $solution): void
 {
-    if (empty($questionValues) && empty($solution)) {
-        die;
-    }
+    line('Welcome to the Brain Games!');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
 
     line($gameRules);
 
@@ -38,14 +26,14 @@ function gameEngine(string $gameRules, array $questionValues, array $solution): 
 
         if ($solution[$i] != $answer) {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $solution[$i]);
-            line("Let's try again, %s!", USER_NAME);
+            line("Let's try again, %s!", $name);
             break;
         }
         line("Correct!", $answer);
         $correctAnswers++;
 
         if ($correctAnswers === 3) {
-            line("Congratulations, %s!", USER_NAME);
+            line("Congratulations, %s!", $name);
         }
     }
 }

@@ -2,7 +2,6 @@
 <?php
 
 use function Brain\Games\Engine\gameEngine;
-use function Brain\Games\Engine\greetingUser;
 use function Games\Brain\Games\Calc\generateGameQuestions;
 use function Games\Brain\Games\Calc\generateRandomArguments;
 use function Games\Brain\Games\Calc\getCorrectAnswer;
@@ -19,5 +18,4 @@ $arguments = generateRandomArguments();
 $gameQuestions = generateGameQuestions($arguments);
 $correctSolution = getCorrectAnswer($arguments);
 
-greetingUser();
 gameEngine(GAME_RULES_CALC, $gameQuestions, $correctSolution);

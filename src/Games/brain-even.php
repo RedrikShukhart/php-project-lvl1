@@ -32,13 +32,10 @@ function getCorrectAnswer(array $gameArguments): array
     foreach ($gameArguments as $arguments) {
         $modRandNumber = fmod($arguments, 2);
 
-        switch ($modRandNumber) {
-            case (0):
-                $solution[$i] = 'yes';
-                break;
-            default:
-                $solution[$i] = 'no';
-                break;
+        if ($modRandNumber == 0) {
+            $solution[$i] = 'yes';
+        } else {
+            $solution[$i] = 'no';
         }
         $i++;
     }

@@ -2,7 +2,6 @@
 <?php
 
 use function Brain\Games\Engine\gameEngine;
-use function Brain\Games\Engine\greetingUser;
 use function Games\Brain\Games\Even\generateRandomArguments;
 use function Games\Brain\Games\Even\getCorrectAnswer;
 
@@ -18,5 +17,4 @@ if (file_exists($autoloadPath1)) {
 $arguments = generateRandomArguments();
 $correctSolution = getCorrectAnswer($arguments);
 
-greetingUser();
 gameEngine(GAME_RULES_EVEN, $arguments, $correctSolution);
