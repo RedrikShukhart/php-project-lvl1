@@ -15,8 +15,8 @@ function generateRandomArguments(): array
     $gameArguments = [];
 
     for ($i = 0; $i < 3; $i++) {
-        $randNumberFirst = rand(0, 10);
-        $randNumberSecond = rand(0, 10);
+        $randNumberFirst = rand(0, 20);
+        $randNumberSecond = rand(0, 20);
 
         $gameArguments[$i] = [
             'number_first' => $randNumberFirst,
@@ -57,7 +57,12 @@ function getGcd(int $numberFirst, int $numberSecond): int
     if ($numberFirst == $numberSecond) {
         return $numberSecond;
     }
-
+    if ($numberFirst == 0 || $numberSecond == 0) {
+        return 0;
+    }
+    if ($numberFirst == 1 || $numberSecond == 1) {
+        return 1;
+    }
     while ($numberFirst != $numberSecond) {
         if ($numberFirst > $numberSecond) {
             $numberFirst = $numberFirst - $numberSecond;
