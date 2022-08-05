@@ -3,7 +3,7 @@
 <a href="https://codeclimate.com/github/RedrikShukhart/php-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/375040e12e763075bc02/maintainability" /></a>
 
 ### Description
-Several mathematics mini-games launched from the console. Every game ask user the question 3 times if user's answer is correct, either the game over.   
+Several mathematics mini-games launched from the console. Every game ask user the question 3 times if user's answer is correct, otherwise the game over.   
 * Brain-even - is the number even;
 * Brain-calc - calculate 2 random numbers and random operator "+ - *";
 * Brain-gcd - find greatest common divisor of 2 given random numbers;
